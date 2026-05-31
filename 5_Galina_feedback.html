@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <title>Галина Николаева — обратная связь</title>
+    <link rel="stylesheet" href="0_Galina_rules.css"> 
+
+
+</head>
+
+
+<!-------------- СSS всё, дальше разметка -------------->
+
+<body>
+
+<!-------------- Шапка: лого и навигация --------------->
+
+<div class="top-bar">
+    <div class="container nav-container">
+        <div class="logo">
+            <a href="1_Galina_main.html">Галина Николаева 🖋️</a>
+	    <small>Что такое мышление? Способность отделять существенное</small>
+        </div>
+
+        <div class="nav-links">
+            <!--- прим. заменить # на ссылки --->
+            <a href="2_Galina_bio.html" class="nav-btn">📜 Биография</a>
+            <a href="3_Galina_work.html" class="nav-btn">📚 Литература</a>
+            <a href="4_Galina_gallery.html" class="nav-btn">🖼️ Галерея</a>
+            <a href="5_Galina_feedback.html" class="nav-btn">📧 Обратная связь</a>
+        </div>
+    </div>
+</div>
+
+
+<!---------------- Основное содержимое ---------------->
+
+
+<main class="container">
+    <div class="writer">
+        <h1>Напишите нам</h1>
+        <p>Заполните форму, чтобы отправить сообщение</p>
+    </div>
+
+    <div class="intro-card">
+        <div class="intro-text">
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" required placeholder="Напишите ваше сообщение..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="file">Прикрепить файлы</label>
+                    <input type="file" id="file" name="attachment">
+                </div>
+
+                <div class="fbtns-align">
+                    <button type="reset" class="fbtns">Очистить форму</button>
+                    <button type="submit" class="fbtns">Отправить сообщение</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</main>
+
+
+<!-------- Подвал страницы -------->
+
+<footer>
+    <div class="container">
+        <p>Сайт посвящён памяти писательницы Галины Николаевой (Волянской).</p>
+        <p style="margin-top: 10px;">© 2026 · Для ознакомления</p>
+    </div>
+</footer>
+
+</body>
+</html>

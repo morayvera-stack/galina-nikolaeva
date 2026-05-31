@@ -1,0 +1,459 @@
+	/*-------------- Основное ---------------*/
+
+	/* глобальное правило для всего контента, убираем автовыравнивание браузеров */
+	* {
+            margin: 0; /*убираем внешние отступы браузеров*/
+            padding: 0; /*убираем внутренние отступы браузеров*/
+            box-sizing: border-box; /**/
+        }
+
+	/* правило для всей страницы */
+	body {
+
+   	    font-family: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; /*перебираем доступные шрифты*/
+   	    background: #F8F3E1; /*фон*/
+    	    color: #41431B /*текст*/
+    	    line-height: 1.4; /*междустрочный интервал*/
+
+	}
+
+	/* стиль объектов класса контейнер */
+       .container {
+            max-width: 1280px; /*ограничиваем ширину, не более Х*/
+            margin: 0 auto; /*центрируем блок*/
+            padding: 0 20px; /*внутренние отступы*/
+        }
+
+	/*-------------- Шапка ---------------*/
+
+	/*правило для шапки*/
+        .top-bar {
+            background: #AEB784; /*фон*/
+            border-bottom: 5px solid #E3DBBB; /*линия раздела*/
+            padding: 16px 0; /*сверху и снизу по 16, по бокам 0*/
+            position: sticky; /*лепим к верху экрана*/
+            top: 0; /*доп. к пред. - вплотную к верхнему краю*/
+            z-index: 10; /*"глубина": чтобы не перекрывалась основным контентом*/
+            box-shadow: 0 5px 10px rgba(65,67,27,1.12); /*тень под шапкой, визуал, красиво*/
+        }
+
+	/*стиль для контейнеров внутри шапки, см. лого и навигация дальше*/
+        .nav-container {
+            display: flex; /*лого и навигация в один ряд*/
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+	/*Логотип (имя писательницы) внутри шапки*/
+        .logo {
+            font-size: 2.50rem;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            color: #2c3e2f;
+        }
+
+	/*убираем с лого оформление ссылки*/
+        .logo a {
+            text-decoration: none;
+            color: inherit;
+	}
+
+	/*для оформления цитаты писательницы*/
+        .logo small {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #2c3e2f;
+	    display: block;
+	    font-family: 'Segoe Script', 'Brush Script MT', 'Comic Sans MS', cursive;
+        }
+
+	/*единая для всех страниц навигация*/
+	.nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+	/*оформление кнопок навигации*/
+	.nav-btn {
+
+            padding: 8px 18px; 
+            background: #f0f0f2;
+            color: #2c3e2f;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: all 0.3s ease; /*для плавности*/
+            border: 1px solid transparent;
+        }
+
+	/*анимация при наведении на кнопку*/
+        .nav-btn:hover {
+            background: #E3DBBB;
+            border-color: #cbcbd2;
+            transform: translateY(1px); /*минус вверх, плюс вниз*/
+        }
+
+
+	/*-------------- Подвал ---------------*/
+
+	/*оформление подвала*/
+        footer {
+            margin-top: 70px;
+            padding: 28px 0 40px;
+            border-top: 3px solid #e4e4e8;
+            text-align: center;
+            font-size: 0.85rem;
+            color: ##F8F3E1;
+	    background: #AEB784;
+        }
+
+
+	/*-------------- СТРАНИЧКИ 5 ШТ ---------------*/
+
+	/*-------------- Главная страница ---------------*/
+
+	.writer {
+            margin: 48px 0 32px 0;
+            text-align: center;
+        }
+
+	/*стиль для заголовка*/
+        .writer h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            color: #2c3e2f;
+            margin-bottom: 12px;
+        }
+
+	/*стиль для абзаца*/
+        .writer p {
+            font-size: 1.25rem;
+            color: #4a4a55;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+	/*пузырь для текста*/
+        .intro-card {
+            background: white;
+            border-radius: 28px;
+            padding: 32px 28px;
+            margin: 32px 0 48px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.03);
+            border: 5px solid #E3DBBB;
+        }
+
+	/*оформление текста*/
+        .intro-text {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            color: #41431B;
+	    text-align: justify;
+        }
+
+        .intro-text p {
+            margin-bottom: 10px;
+        }
+
+	/*оформляем положение портрета*/
+	.intro-img-float {
+    	    float: left;   
+   	    width: 200px;
+    	    height: auto;
+    	    margin-right: 24px;
+    	    margin-bottom: 16px;
+    	    border-radius: 16px;
+	}
+
+	/*-------------- БИОГРАФИЯ: ПРАВИЛА ГЛАВНОЙ УЧТЕНЫ, ДОПОЛНИТЕЛЬНЫЕ НИЖЕ ---------------*/
+
+	fieldset{
+
+	    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	    padding: 25px;
+	    margin: 10px 10px 10px 10px;
+            line-height: 1.7;
+	    border: 1px solid #556B2F;
+
+	}
+
+	fieldset p {
+   	    text-indent: 2em;  /* красная строка, 25px или 1.5rem */
+	}
+
+	i, em {
+    	    font-style: italic;
+    	    font-weight: 500;  /* или 600 — полужирный курсив */
+	}
+
+
+	legend{
+
+	    width: 200px; 
+	    padding: 10px;
+	    background-color: #F8F3E1;
+	    font-style: italic;
+	    font-weight: 600;	    
+	    border: 3px solid #556B2F;
+	}
+
+
+	/*оформляем положение картинок*/
+	.textimg1 {
+    	    float: right;  
+   	    width: 400px;
+    	    height: auto;
+    	    border-radius: 16px;
+	    margin-left: 25px;
+	    margin-top: 10px;
+	    border: 5px solid #ffffff; /*556B2F*/
+	}
+
+	/*оформляем положение картинок*/
+	.textimg2 {
+    	    float: left;  
+   	    width: 600px;
+    	    height: auto;
+    	    border-radius: 16px;
+	    margin-right: 25px;
+	    margin-top: 10px;
+	    border: 5px solid #ffffff; /*556B2F*/
+	}
+
+	.quote {
+    	    background-color: #F8F3E1;      
+   	    border-left: 5px solid #556B2F; /* цветная полоса слева */
+   	    padding: 20px 25px;
+    	    margin: 20px 20px;
+    	    font-style: italic;
+    	    line-height: 1.5;
+    	    color: #41431B;
+    	    font-style: italic;
+    	    font-weight: 400;  /* или 600 — полужирный курсив */
+	}
+
+	/*-------------- Стили для таблицы ---------------*/
+
+
+	.bio-table {
+    	    width: 100%;
+   	    border-collapse: collapse;
+    	    background-color: #F8F3E1;
+	    font-family:'AGPmod', system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	}
+
+	.bio-table thead tr {
+ 	     background-color: #AEB784;
+ 	     сolor: #2c3e2f;
+	}
+
+	.bio-table th {
+    	    border: 1px solid #556B2F;
+    	    padding: 12px;
+    	    text-align: center;
+	}
+
+	.bio-table td {
+   	     border: 1px solid #556B2F;
+   	     padding: 10px;
+	}
+
+
+	/*-------------- ЛИТЕРАТУРА: ПРАВИЛА ГЛАВНОЙ УЧТЕНЫ, ДОПОЛНИТЕЛЬНЫЕ НИЖЕ ---------------*/
+
+	.poems-container {
+    	    display: grid;
+    	    grid-template-columns: 1fr 1fr;  /* ширина колонок */
+    	    gap: 30px;
+    	    margin: 25px 0;
+	 }
+
+	.poem {
+    	    background-color: #FFFFFF;      
+	    text-align: justify;
+   	    border-left: 5px solid #556B2F; /* цветная полоса слева */
+   	    padding: 20px 25px;
+    	    margin: 20px 20px;
+    	    font-style: italic;
+    	    line-height: 1.5;
+    	    color: #41431B;
+    	    font-style: italic;
+    	    font-weight: 500;  /* или 600 — полужирный курсив */
+	}
+
+	.poems-side {
+    	    display: flex;
+    	    flex-direction: column;
+    	    gap: 25px;
+	}
+
+	.poem-small {
+	    background-color: #FFFFFF;      
+	    text-align: justify;
+   	    border-left: 5px solid #556B2F; /* цветная полоса слева */
+   	    padding: 20px 25px;
+    	    margin: 20px 20px;
+    	    font-style: italic;
+    	    line-height: 1.5;
+    	    color: #41431B;
+    	    font-style: italic;
+    	    font-weight: 500;  /* или 600 — полужирный курсив */
+	}
+
+	a.link {
+	    font-size: 1.95rem;
+	    font-family: 'AGPmod';
+ 	    font-weight: 600;
+    	    text-decoration: none;
+   	    color: inherit;
+    	    cursor: pointer;
+    	    border-bottom: none;
+	}
+
+
+
+
+	/*-------------- ГАЛЕРЕЯ: ПРАВИЛА ГЛАВНОЙ УЧТЕНЫ, ДОПОЛНИТЕЛЬНЫЕ НИЖЕ ---------------*/
+
+	.gallery {
+    	    display: grid;
+    	    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   	    gap: 20px;
+   	    margin: 40px 0;
+	}
+
+	.thumb img {
+   	    width: 250px;
+    	    height: 350px;
+	    object-fit: cover;
+    	    border-radius: 12px;
+    	    transition: 0.2s;
+    	    cursor: pointer;
+	}
+
+	.thumb img:hover {
+    	    transform: scale(1.05);
+    	    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+	}	
+
+
+	/*-------------- ОБРАТНАЯ СВЯЗЬ: ПРАВИЛА ГЛАВНОЙ УЧТЕНЫ, ДОПОЛНИТЕЛЬНЫЕ НИЖЕ ---------------*/
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* сами поля ввода */
+.form-group input,
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 12px 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 12px;
+    background: #F8F3E1;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 250px;
+}
+
+.fbtns-align {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fbtns {
+    min-width: 200px;
+    background: #AEB784;
+    color: #2c3e2f;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.fbtns:hover {
+    background: #556B2F;
+    color: white;
+}
+
+/*---------------Адаптивная шапка тест--------------------*/
+
+@media (max-height: 750px) {
+    .top-bar {
+        padding: 10px 0;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .logo small {
+        font-size: 0.75rem;
+    }
+    
+    .nav-btn {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-height: 600px) {
+    .top-bar {
+        padding: 6px 0;
+    }
+    
+    .logo {
+        font-size: 1.6rem;
+    }
+    
+    .logo small {
+        font-size: 0.65rem;
+    }
+    
+    .nav-btn {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .nav-links {
+        gap: 8px;
+    }
+}
+
+@media (max-height: 480px) {
+    .top-bar {
+        padding: 4px 0;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .logo small {
+        display: none;  /* скрываем цитату на очень низких экранах */
+    }
+    
+    .nav-btn {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+    }
+}
