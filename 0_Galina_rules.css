@@ -266,6 +266,10 @@
 
 	/*-------------- ЛИТЕРАТУРА: ПРАВИЛА ГЛАВНОЙ УЧТЕНЫ, ДОПОЛНИТЕЛЬНЫЕ НИЖЕ ---------------*/
 
+	ul{
+	    padding:1mm 3mm;
+	}
+
 	.poems-container {
     	    display: grid;
     	    grid-template-columns: 1fr 1fr;  /* ширина колонок */
